@@ -1,0 +1,27 @@
+# Core dependencies
+ultralytics==8.0.181
+torch>=1.9.0
+opencv-python
+numpy
+Pillow
+matplotlib
+
+# Web interface
+streamlit
+
+# YouTube + video input support
+pafy
+youtube-dl
+
+# Tracking dependencies
+scikit-image
+scipy
+
+# Optional but useful
+pyyaml
+tqdm
+requests
+
+# For video handling and encoding
+imageio
+imageio-ffmpeg
