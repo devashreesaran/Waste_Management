@@ -17,7 +17,7 @@ from torchvision.models import mobilenet_v2
 # -----------------------------
 @st.cache_resource
 def load_models():
-    yolo_model = YOLO("C:/Users/mudit/Final_project/best.pt")
+    yolo_model = YOLO("best.pt")
     mobilenet_model = mobilenet_v2(pretrained=False)
     classes = [
         'aerosol_cans', 'food_waste', 'general', 'glass_bottlles', 'glass_jars',
@@ -25,7 +25,7 @@ def load_models():
         'plastic_cup_lids', 'magzines', 'newspaper'
     ]
     mobilenet_model.classifier[1] = torch.nn.Linear(mobilenet_model.last_channel, len(classes))
-    mobilenet_model.load_state_dict(torch.load("C:/Users/mudit/Final_project/mobilenetv2_fine_classifier.pth", map_location='cpu'))
+    mobilenet_model.load_state_dict(torch.load("mobilenetv2_fine_classifier.pth", map_location="cpu")))
     mobilenet_model.eval()
     return yolo_model, mobilenet_model, classes
 
@@ -116,3 +116,4 @@ if uploaded_file is not None:
 
 
         
+
