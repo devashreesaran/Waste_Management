@@ -74,7 +74,13 @@ model = YOLO("path/to/yolov8_custom.pt")
 Navigate to the app folder and launch Streamlit:
 
 ```bash
-cd streamlit-detection-tracking-app
+git clone https://github.com/devashreesaran/Waste_Management.git
+cd Waste_Management
+
+pip install -r Requirements_YOLOv8.txt
+pip install -r Requirements_MobileNetV2.txt
+
+streamlit run app.py
 streamlit run app.py
 ```
 
